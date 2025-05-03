@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Cam add new items">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Rename template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
+    "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/konso/PycharmProjects/food-info/food_info/food_info/templates/food_info",
     "list.type.of.created.stylesheet": "CSS",
@@ -130,7 +129,7 @@
       <updated>1746292609046</updated>
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
-      <workItem from="1746303714796" duration="4659000" />
+      <workItem from="1746303714796" duration="5134000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -164,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746308891149</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Rename template">
+      <option name="closed" value="true" />
+      <created>1746308983808</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746308983808</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +182,7 @@
     <MESSAGE value="Add fucking .idea files because fuck you git and pycharm" />
     <MESSAGE value="Add more info to html + value calculations" />
     <MESSAGE value="Cam add new items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cam add new items" />
+    <MESSAGE value="Rename template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename template" />
   </component>
 </project>
