@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add more info to html + value calculations">
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/templates/new-food-item.html" afterDir="false" />
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Cam add new items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +130,7 @@
       <updated>1746292609046</updated>
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
-      <workItem from="1746303714796" duration="4537000" />
+      <workItem from="1746303714796" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -159,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746305789000</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cam add new items">
+      <option name="closed" value="true" />
+      <created>1746308891149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746308891149</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +174,7 @@
     <MESSAGE value="Initial semi-working scaffold" />
     <MESSAGE value="Add fucking .idea files because fuck you git and pycharm" />
     <MESSAGE value="Add more info to html + value calculations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more info to html + value calculations" />
+    <MESSAGE value="Cam add new items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cam add new items" />
   </component>
 </project>

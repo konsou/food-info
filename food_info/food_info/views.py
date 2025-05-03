@@ -8,6 +8,7 @@ from .models import FoodItem
 
 class FoodItemListView(ListView):
     model = FoodItem
+    template_name = "food-item-list.html"
 
 def new_food_item(request):
     if request.method == "POST":
