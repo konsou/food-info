@@ -1,1 +1,4 @@
 Django~=5.2
+pillow
+opencv-python
+pyzbar  # requires libzbar0 os package

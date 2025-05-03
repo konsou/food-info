@@ -12,7 +12,7 @@ class FoodItemListView(ListView):
 
 def new_food_item(request):
     if request.method == "POST":
-        form = FoodItemForm(request.POST)
+        form = FoodItemForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
