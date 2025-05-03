@@ -1,9 +1,43 @@
-
+{% load static %}
+<!HTML>
+<html lang="en">
+<head>
+    <title>Food Items</title>
+    <style>
+        th { padding-left: 5px; padding-right: 5px; }
+        td { border: 1px solid #333; padding-left: 5px; padding-right: 5px;}
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+    </style>
+</head>
+<body>
 {% block content %}
-    <h2>Food items</h2>
-    <ul>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <th>Name</th>
+            <th>EAN</th>
+            <th>Price</th>
+            <th>Carbs/100g</th>
+            <th>Protein/100g</th>
+            <th>Fat/100g</th>
+            <th>kCal/100g</th>
+            <th>€/100prot</th>
+            <th>€/1000kcal</th>
+        </tr>
         {% for item in object_list %}
-            <li>{{ item.name }}</li>
+        <tr>
+            <td>{{ item.name }} {{ item.weight }} g</td>
+            <td>{{ item.ean }}</td>
+            <td class="text-center">{{ item.price|floatformat:2 }} €</td>
+            <td class="text-center">{{ item.carbs_per_100g|floatformat:2 }}</td>
+            <td class="text-center">{{ item.protein_per_100g|floatformat:2 }}</td>
+            <td class="text-center">{{ item.fat_per_100g|floatformat:2 }}</td>
+            <td class="text-center">{{ item.kcal_per_100g|floatformat:2 }}</td>
+            <td class="text-center">{{ item.price_per_100g_protein|floatformat:2 }}</td>
+            <td class="text-center">{{ item.price_per_1000_kcal|floatformat:2 }}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
 {% endblock %}
+</body>
+</html>

@@ -18,4 +18,16 @@ class FoodItem(models.Model):
     def price_per_100g_carbs(self) -> float:
         carbs_in_package = self.weight / 100 * self.carbs_per_100g
         price_per_1g_carb = self.price / carbs_in_package
-        return price_per_1g_carb * 100
+        return price_per_1g_carb * 100    @property
+
+    @property
+    def price_per_100g_protein(self) -> float:
+        protein_in_package = self.weight / 100 * self.protein_per_100g
+        price_per_1g_protein = self.price / protein_in_package
+        return price_per_1g_protein * 100
+
+    @property
+    def price_per_1000_kcal(self) -> float:
+        kcal_in_package = self.weight / 100 * self.kcal_per_100g
+        price_per_1_kcal = self.price / kcal_in_package
+        return price_per_1_kcal * 1000
