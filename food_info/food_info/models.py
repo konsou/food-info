@@ -1,15 +1,19 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 
+def validate_ean(value):
+    if not len(str(value)) == 13:
+        raise ValidationError("EAN must be 13 characters long")
 
 class FoodItem(models.Model):
     name = models.CharField(max_length=100)
-    ean = models.IntegerField()
+    weight = models.FloatField()
+    ean = models.IntegerField(validators=[validate_ean])
     price = models.FloatField()
-    weight = models.FloatField(help_text="Weight in grams")
+    kcal_per_100g = models.FloatField()
+    fat_per_100g = models.FloatField()
     carbs_per_100g = models.FloatField()
     protein_per_100g = models.FloatField()
-    fat_per_100g = models.FloatField()
-    kcal_per_100g = models.FloatField()
 
     def __str__(self):
         return f"{self.name} {int(self.weight)} g"

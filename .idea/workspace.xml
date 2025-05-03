@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Rename template">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Button to add an item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +129,7 @@
       <updated>1746292609046</updated>
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
-      <workItem from="1746303714796" duration="5134000" />
+      <workItem from="1746303714796" duration="5359000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -171,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746308983808</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Button to add an item">
+      <option name="closed" value="true" />
+      <created>1746309471332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746309471332</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +191,7 @@
     <MESSAGE value="Add more info to html + value calculations" />
     <MESSAGE value="Cam add new items" />
     <MESSAGE value="Rename template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename template" />
+    <MESSAGE value="Button to add an item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Button to add an item" />
   </component>
 </project>
