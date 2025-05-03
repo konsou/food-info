@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import FoodItemListView
+from .views import FoodItemListView, new_food_item
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', FoodItemListView.as_view()),
+    path('new-food-item/', new_food_item)
 ]

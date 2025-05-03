@@ -26,7 +26,7 @@
         </tr>
         {% for item in object_list %}
         <tr>
-            <td>{{ item.name }} {{ item.weight }} g</td>
+            <td>{{ item.name }} {{ item.weight|floatformat }} g</td>
             <td>{{ item.ean }}</td>
             <td class="text-center">{{ item.price|floatformat:2 }} €</td>
             <td class="text-center">{{ item.carbs_per_100g|floatformat:2 }}</td>

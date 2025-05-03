@@ -4,22 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add fucking .idea files because fuck you git and pycharm">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add more info to html + value calculations">
+      <change afterPath="$PROJECT_DIR$/food_info/food_info/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_info/food_info/templates/new-food-item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food_info/fooditem_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -54,30 +60,32 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/konso/PycharmProjects/food-info/food_info/food_info",
+    "last_opened_file_path": "/home/konso/PycharmProjects/food-info/food_info/food_info/templates/food_info",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/food_info/food_info/templates/food_info" />
       <recent name="$PROJECT_DIR$/food_info/food_info" />
       <recent name="$PROJECT_DIR$/food_info/templates/food_info" />
       <recent name="$PROJECT_DIR$/food_info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/food_info/food_info/templates" />
       <recent name="$PROJECT_DIR$/food_info/food_info/static/food_info" />
       <recent name="$PROJECT_DIR$/food_info/food_info/static" />
       <recent name="$PROJECT_DIR$/food_info/food_info" />
       <recent name="$PROJECT_DIR$/food_info" />
-      <recent name="$PROJECT_DIR$/food_info/food_info/templates/food_info" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,7 +133,7 @@
       <updated>1746292609046</updated>
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
-      <workItem from="1746303714796" duration="2029000" />
+      <workItem from="1746303714796" duration="4537000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -143,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746297812870</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add more info to html + value calculations">
+      <option name="closed" value="true" />
+      <created>1746305789000</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746305789000</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial semi-working scaffold" />
     <MESSAGE value="Add fucking .idea files because fuck you git and pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fucking .idea files because fuck you git and pycharm" />
+    <MESSAGE value="Add more info to html + value calculations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more info to html + value calculations" />
   </component>
 </project>
