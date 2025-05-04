@@ -12,4 +12,6 @@ services:
       - SECRET_KEY
     restart: always
     container_name: food-info
-
+    volumes:
+      - ./db:/db
+      - ./settings_local.py:/app/food_info/settings_local.py
