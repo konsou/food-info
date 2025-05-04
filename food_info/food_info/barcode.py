@@ -1,4 +1,5 @@
 import cv2
+from django.core.exceptions import ValidationError
 from pyzbar.pyzbar import decode as pyzbar_decode
 
 
@@ -12,3 +13,7 @@ def read_barcode(image_path: str) -> int:
 
     raise ValueError("No barcode found")
 
+
+def validate_ean(value):
+    if not len(str(value)) == 13:
+        raise ValidationError("EAN must be 13 characters long")

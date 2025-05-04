@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add a startup script that applies migrations">
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/fetch_info.py" afterDir="false" />
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add fetch_nutrition_info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/barcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/barcode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/new-food-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/new-food-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,7 @@
       <recent name="$PROJECT_DIR$/food_info/food_info/static" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.fetch_info">
+  <component name="RunManager" selected="Django Server.Django">
     <configuration name="fetch_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="food-info" />
       <option name="ENV_FILES" value="" />
@@ -198,7 +202,7 @@
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
       <workItem from="1746303714796" duration="10670000" />
-      <workItem from="1746371816734" duration="10276000" />
+      <workItem from="1746371816734" duration="13804000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -296,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746382885290</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add fetch_nutrition_info">
+      <option name="closed" value="true" />
+      <created>1746385776512</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746385776512</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +327,8 @@
     <MESSAGE value="Docker" />
     <MESSAGE value="Structure refactor" />
     <MESSAGE value="Add a startup script that applies migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a startup script that applies migrations" />
+    <MESSAGE value="Add fetch_nutrition_info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fetch_nutrition_info" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/food_info$fetch_info.coverage" NAME="fetch_info Coverage Results" MODIFIED="1746385759204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/food_info/food_info" />

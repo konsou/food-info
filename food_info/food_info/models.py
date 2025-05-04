@@ -1,9 +1,7 @@
-from django.core.exceptions import ValidationError
 from django.db import models
 
-def validate_ean(value):
-    if not len(str(value)) == 13:
-        raise ValidationError("EAN must be 13 characters long")
+from .barcode import validate_ean
+
 
 class FoodItem(models.Model):
     name = models.CharField(max_length=100)
@@ -22,7 +20,7 @@ class FoodItem(models.Model):
     def price_per_100g_carbs(self) -> float:
         carbs_in_package = self.weight / 100 * self.carbs_per_100g
         price_per_1g_carb = self.price / carbs_in_package
-        return price_per_1g_carb * 100    @property
+        return price_per_1g_carb * 100
 
     @property
     def price_per_100g_protein(self) -> float:

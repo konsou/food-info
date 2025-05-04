@@ -1,7 +1,7 @@
 import tempfile
 
 from django.core.exceptions import ValidationError
-from django.forms import ModelForm, ImageField
+from django.forms import ModelForm, ImageField, Form
 
 from .barcode import read_barcode
 from .models import FoodItem
@@ -10,21 +10,21 @@ from .models import FoodItem
 class FoodItemForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['ean'].required = False
+        self.fields["ean"].required = False
 
     class Meta:
         model = FoodItem
         fields = "__all__"
-    ean_image = ImageField(required=False)
 
+    ean_image = ImageField(required=False)
 
     def clean(self):
         cleaned_data = super().clean()
 
-        if cleaned_data.get('ean'):
+        if cleaned_data.get("ean"):
             return cleaned_data
 
-        if not cleaned_data.get('ean_image'):
+        if not cleaned_data.get("ean_image"):
             raise ValidationError("EAN or EAN image must be provided")
 
         with tempfile.NamedTemporaryFile() as tmp:
@@ -39,3 +39,6 @@ class FoodItemForm(ModelForm):
             self.cleaned_data["ean"] = ean
             return self.cleaned_data
 
+
+class UploadEANImageForm(Form):
+    image = ImageField()
