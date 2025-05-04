@@ -1,0 +1,15 @@
+services:
+  food-info:
+    image: "docker.konso.fi/food-info:latest"
+    build:
+      dockerfile: Dockerfile
+      context: .
+      tags:
+        - "docker.konso.fi/food-info"
+    ports:
+      - "8001:8000"
+    environment:
+      - SECRET_KEY
+    restart: always
+    container_name: food-info
+
