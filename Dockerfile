@@ -12,5 +12,6 @@ RUN pip install -r requirements.txt
 RUN rm requirements.txt
 
 COPY food_info /app
+COPY start.sh /app/
 WORKDIR /app
-ENTRYPOINT ["uvicorn", "food_info.asgi:application", "--host", "0.0.0.0"]
+ENTRYPOINT ["/app/start.sh"]
