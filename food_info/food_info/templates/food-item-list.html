@@ -39,6 +39,23 @@
         </tr>
         {% endfor %}
     </table>
+    <form id="ean-image-form" enctype="multipart/form-data" action="" method="post">
+        {% csrf_token %}
+        {{ photo_form }}
+    </form>
+    <script>
+    let formElem = document.getElementById("ean-image-form");
+    let fileElem = document.getElementById("id_image");
+    fileElem.onchange = async (e) => {
+        e.preventDefault();
+        let response = await fetch('/from-image/', {
+            method: 'POST',
+            body: new FormData(formElem)
+        });
+        let result = await response.json();
+        console.log(result);
+    };
+    </script>
 {% endblock %}
 </body>
 </html>

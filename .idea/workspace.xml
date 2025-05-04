@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Fetch nutrition info from EAN image when user uploads an image">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Can add new items with a photo of the barcode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/fetch_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/fetch_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
     </list>
@@ -205,7 +204,7 @@
       <workItem from="1746292667163" duration="5883000" />
       <workItem from="1746303714796" duration="10670000" />
       <workItem from="1746371816734" duration="14476000" />
-      <workItem from="1746396733720" duration="3023000" />
+      <workItem from="1746396733720" duration="4865000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -319,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746389363638</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Can add new items with a photo of the barcode">
+      <option name="closed" value="true" />
+      <created>1746399922905</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746399922905</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +347,8 @@
     <MESSAGE value="Add a startup script that applies migrations" />
     <MESSAGE value="Add fetch_nutrition_info" />
     <MESSAGE value="Fetch nutrition info from EAN image when user uploads an image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetch nutrition info from EAN image when user uploads an image" />
+    <MESSAGE value="Can add new items with a photo of the barcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can add new items with a photo of the barcode" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/food_info$fetch_info.coverage" NAME="fetch_info Coverage Results" MODIFIED="1746385759204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/food_info/food_info" />

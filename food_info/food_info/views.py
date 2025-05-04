@@ -19,9 +19,12 @@ from .forms import FoodItemForm, UploadEANImageForm
 from .models import FoodItem
 
 
-class FoodItemListView(ListView):
-    model = FoodItem
-    template_name = "food-item-list.html"
+def food_item_list(request: HttpRequest) -> HttpResponse:
+    items = FoodItem.objects.all()
+    photo_form = UploadEANImageForm()
+    return render(
+        request, "food-item-list.html", {"object_list": items, "photo_form": photo_form}
+    )
 
 
 def new_food_item(request: HttpRequest):
