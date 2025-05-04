@@ -1,5 +1,6 @@
 import tempfile
 
+from django.core import serializers
 from django.core.exceptions import ValidationError
 from django.http import (
     HttpResponseRedirect,
@@ -13,7 +14,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from .barcode import read_barcode, validate_ean
-from .fetch_info import fetch_nutrition_info
+from .fetch_info import fetch_item_info
 from .forms import FoodItemForm, UploadEANImageForm
 from .models import FoodItem
 
@@ -45,7 +46,7 @@ def new_food_item(request: HttpRequest):
     )
 
 
-def food_info_from_image(request: HttpRequest) -> HttpResponse:
+def food_item_from_image(request: HttpRequest) -> HttpResponse:
     if not request.method == "POST":
         return HttpResponseNotAllowed(permitted_methods=["POST"])
 
@@ -62,7 +63,8 @@ def food_info_from_image(request: HttpRequest) -> HttpResponse:
         except (ValueError, OSError, ValidationError):
             return HttpResponseBadRequest()
 
-    nutrition_info = fetch_nutrition_info(ean)._asdict()
-    nutrition_info["ean"] = ean
+    food_item = fetch_item_info(ean)
+    food_item.save()
+    as_json = serializers.serialize("json", [food_item])
 
-    return JsonResponse(nutrition_info)
+    return JsonResponse(as_json, safe=False)

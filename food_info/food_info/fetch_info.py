@@ -1,21 +1,29 @@
 import re
-from typing import NamedTuple
 
 import requests
 from bs4 import BeautifulSoup
 
-
-class NutritionInfo(NamedTuple):
-    kcal_per_100g: float
-    fat_per_100g: float
-    carbs_per_100g: float
-    protein_per_100g: float
+from .models import FoodItem
 
 
-def fetch_nutrition_info(ean: int) -> NutritionInfo:
+def fetch_item_info(ean: int) -> FoodItem:
+    """Lol no error handling at all"""
     url = f"https://www.s-kaupat.fi/tuote/placeholder/{ean}"
     r = requests.get(url)
     soup = BeautifulSoup(r.content, "html.parser")
+
+    name_with_weight = soup.find(
+        "h1", attrs={"data-test-id": "product-name"}
+    ).text.strip()
+    weight_text = re.search(r"\d*,*\.*\d+\s*g", name_with_weight).group(0)
+    weight = float(weight_text.replace("g", "").replace(",", ".").strip())
+
+    name = name_with_weight.replace(weight_text, "").strip()
+
+    price_text = soup.find(
+        "span", attrs={"data-test-id": "display-price"}
+    ).text.replace(",", ".")
+    price = float(re.findall(r"(\d*\.*\d+)", price_text)[0])
 
     nutrient_info_container = soup.find(
         "div", attrs={"data-test-id": "nutrients-info-per-unit-content"}
@@ -34,7 +42,11 @@ def fetch_nutrition_info(ean: int) -> NutritionInfo:
     protein_text = rows[6].find_all(attrs={"class": "cell"})[1].text.replace(",", ".")
     protein = float(re.findall(r"(\d*\.*\d+)", protein_text)[0])
 
-    return NutritionInfo(
+    return FoodItem(
+        name=name,
+        weight=weight,
+        ean=ean,
+        price=price,
         kcal_per_100g=kcal,
         fat_per_100g=fat,
         carbs_per_100g=carbs,

@@ -12,7 +12,7 @@
 </head>
 <body>
 {% block content %}
-    <form enctype="multipart/form-data" action="/new-food-item/" method="post">
+    <form enctype="multipart/form-data" action="/new/" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
@@ -26,7 +26,7 @@
     let formElem = document.getElementById("ean-image-form")
     formElem.onsubmit = async (e) => {
         e.preventDefault();
-        let response = await fetch('/fetch-info/', {
+        let response = await fetch('/from-image/', {
             method: 'POST',
             body: new FormData(formElem)
         });

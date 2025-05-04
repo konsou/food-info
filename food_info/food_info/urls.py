@@ -18,11 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import FoodItemListView, new_food_item, food_info_from_image
+from .views import FoodItemListView, new_food_item, food_item_from_image
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", FoodItemListView.as_view()),
-    path("new-food-item/", new_food_item),
-    path("fetch-info/", food_info_from_image),
+    path("new/", new_food_item),
+    path("from-image/", food_item_from_image),
 ]
