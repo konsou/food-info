@@ -1,6 +1,8 @@
 Django~=5.2
 pillow
-opencv-python
-pyzbar  # requires libzbar0 os package
-python-dotenv
+opencv-python~=4.11.0.86
+pyzbar~=0.1.9
+python-dotenv~=1.1.0
 black  # dev
+requests~=2.32.3
+beautifulsoup4

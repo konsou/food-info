@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Structure refactor">
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Add a startup script that applies migrations">
+      <change afterPath="$PROJECT_DIR$/food_info/food_info/fetch_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,7 @@
     "Docker.Dockerfile.executor": "Run",
     "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.fetch_info.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -89,7 +90,30 @@
       <recent name="$PROJECT_DIR$/food_info/food_info/static" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunManager" selected="Python.fetch_info">
+    <configuration name="fetch_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="food-info" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/food_info/food_info" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/food_info/food_info/fetch_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Django" type="Python.DjangoServer" factoryName="Django server">
       <module name="food-info" />
       <option name="ENV_FILES" value="" />
@@ -146,9 +170,11 @@
       <item itemvalue="Django Server.Django" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Python.fetch_info" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fetch_info" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
@@ -172,7 +198,7 @@
       <workItem from="1746292610209" duration="49000" />
       <workItem from="1746292667163" duration="5883000" />
       <workItem from="1746303714796" duration="10670000" />
-      <workItem from="1746371816734" duration="8704000" />
+      <workItem from="1746371816734" duration="10276000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -262,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746378874066</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add a startup script that applies migrations">
+      <option name="closed" value="true" />
+      <created>1746382885290</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746382885290</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +314,10 @@
     <MESSAGE value="Migration 0003" />
     <MESSAGE value="Docker" />
     <MESSAGE value="Structure refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure refactor" />
+    <MESSAGE value="Add a startup script that applies migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a startup script that applies migrations" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/food_info$fetch_info.coverage" NAME="fetch_info Coverage Results" MODIFIED="1746385759204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/food_info/food_info" />
   </component>
 </project>
