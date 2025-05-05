@@ -6,7 +6,7 @@ from .barcode import validate_ean
 class FoodItem(models.Model):
     name = models.CharField(max_length=100)
     weight = models.FloatField()
-    ean = models.IntegerField(validators=[validate_ean])
+    ean = models.IntegerField(validators=[validate_ean], unique=True)
     price = models.FloatField()
     kcal_per_100g = models.FloatField()
     fat_per_100g = models.FloatField()

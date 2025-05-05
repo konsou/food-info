@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Work towards using a js frontend">
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/static/foodItemFetch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/static/foodItemListPageRender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/food_info/food_info/views/food_item_list.py" afterDir="false" />
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Fetch and render items with js and an API call">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/static/foodItemRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/static/foodItemRender.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/renderers_js.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +212,7 @@
       <workItem from="1746303714796" duration="10670000" />
       <workItem from="1746371816734" duration="14476000" />
       <workItem from="1746396733720" duration="14129000" />
-      <workItem from="1746453284295" duration="1921000" />
+      <workItem from="1746453284295" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -371,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746454042363</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fetch and render items with js and an API call">
+      <option name="closed" value="true" />
+      <created>1746455268983</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746455268983</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +411,8 @@
     <MESSAGE value="Photo button on front page" />
     <MESSAGE value="Can now add items with the phone button. Make better." />
     <MESSAGE value="Work towards using a js frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work towards using a js frontend" />
+    <MESSAGE value="Fetch and render items with js and an API call" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetch and render items with js and an API call" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
