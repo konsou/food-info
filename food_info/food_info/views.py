@@ -12,11 +12,16 @@ from django.http import (
 )
 from django.shortcuts import render
 from django.views.generic import ListView
+from rest_framework.decorators import api_view
+from rest_framework.renderers import JSONRenderer
+from rest_framework.request import Request
+from rest_framework.response import Response
 
 from .barcode import read_barcode, validate_ean
 from .fetch_info import fetch_item_info
 from .forms import FoodItemForm, UploadEANImageForm
 from .models import FoodItem
+from .serializers import FoodItemSerializer
 
 
 def food_item_list(request: HttpRequest) -> HttpResponse:
@@ -27,7 +32,7 @@ def food_item_list(request: HttpRequest) -> HttpResponse:
     )
 
 
-def new_food_item(request: HttpRequest):
+def new_food_item(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = FoodItemForm(request.POST, request.FILES)
         form_image = UploadEANImageForm(request.POST, request.FILES)
@@ -49,13 +54,11 @@ def new_food_item(request: HttpRequest):
     )
 
 
-def food_item_from_image(request: HttpRequest) -> HttpResponse:
-    if not request.method == "POST":
-        return HttpResponseNotAllowed(permitted_methods=["POST"])
-
+@api_view(["POST"])
+def food_item_from_image(request: Request) -> Response:
     form_image = UploadEANImageForm(request.POST, request.FILES)
     if not form_image.is_valid():
-        return HttpResponseBadRequest()
+        return Response(status=400)
 
     with tempfile.NamedTemporaryFile() as tmp:
         for chunk in form_image.cleaned_data["image"].chunks():
@@ -64,10 +67,11 @@ def food_item_from_image(request: HttpRequest) -> HttpResponse:
             ean = read_barcode(tmp.name)
             validate_ean(ean)
         except (ValueError, OSError, ValidationError):
-            return HttpResponseBadRequest()
+            return Response(status=400)
 
     food_item = fetch_item_info(ean)
     food_item.save()
-    as_json = serializers.serialize("json", [food_item])
+    serializer = FoodItemSerializer(food_item)
+    json = JSONRenderer().render(serializer.data)
 
-    return JsonResponse(as_json, safe=False)
+    return Response(data=json)
