@@ -17,11 +17,11 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.request import Request
 from rest_framework.response import Response
 
-from .barcode import read_barcode, validate_ean
-from .fetch_info import fetch_item_info
-from .forms import FoodItemForm, UploadEANImageForm
-from .models import FoodItem
-from .serializers import FoodItemSerializer
+from ..barcode import read_barcode, validate_ean
+from ..fetch_info import fetch_item_info
+from ..forms import FoodItemForm, UploadEANImageForm
+from ..models import FoodItem
+from ..serializers import FoodItemSerializer
 
 
 def food_item_list(request: HttpRequest) -> HttpResponse:

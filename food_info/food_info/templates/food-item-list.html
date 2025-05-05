@@ -3,11 +3,13 @@
 <html lang="en">
 <head>
     <title>Food Items</title>
+    <script src="{% static "foodItemRenderer.js" %}"></script>
     <style>
         th { padding-left: 5px; padding-right: 5px; }
         td { border: 1px solid #333; padding-left: 5px; padding-right: 5px;}
         .text-center { text-align: center; }
         .text-left { text-align: left; }
+        .text-right { text-align: right; }
         .one-click-file-upload::-webkit-file-upload-button {
           visibility: hidden;
         }
@@ -28,7 +30,7 @@
             width: 50px;
             height: 50px;
             line-height: 42px;
-            position: absolute;
+            position: fixed;
             right: 40px;
             bottom: 50px;
         }
@@ -36,7 +38,7 @@
 </head>
 <body>
 {% block content %}
-    <a style="position: absolute; right: 100px; bottom: 50px; width: 50px; height: 50px; color: white; background: green; text-decoration: none; text-align: center; font-size: 40px; font-weight: bold; border-radius: 25px;" href="new/">+</a>
+    <a style="position: fixed; right: 100px; bottom: 50px; width: 50px; height: 50px; color: white; background: green; text-decoration: none; text-align: center; font-size: 40px; font-weight: bold; border-radius: 25px;" href="new/">+</a>
     <table id="food-items" style="margin-left: auto; margin-right: auto;">
         <tr>
             <th>Name</th>
@@ -77,28 +79,10 @@
             body: new FormData(formElem)
         });
         let result = await response.json();
-        const fields = JSON.parse(result);
-        console.log(fields);
-        const newRow = document.getElementById("food-items").insertRow(-1);
-        const nameCell = newRow.insertCell(0);
-        const eanCell = newRow.insertCell(-1);
-        const priceCell = newRow.insertCell(-1);
-        const carbsCell = newRow.insertCell(-1);
-        const proteinCell = newRow.insertCell(-1);
-        const fatCell = newRow.insertCell(-1);
-        const kcalCell = newRow.insertCell(-1);
-        const proteinValueCell = newRow.insertCell(-1);
-        const kcalValueCell = newRow.insertCell(-1);
-        nameCell.innerHTML = fields.name + " " + fields.weight;
-        eanCell.innerHTML = fields.ean;
-        priceCell.innerHTML = fields.price;
-        carbsCell.innerHTML = fields.carbs_per_100g;
-        proteinCell.innerHTML = fields.protein_per_100g;
-        fatCell.innerHTML = fields.fat_per_100g;
-        kcalCell.innerHTML = fields.kcal_per_100g;
-        proteinValueCell.innerHTML = fields.price_per_100g_protein;
-        kcalValueCell.innerHTML = fields.price_per_1000_kcal;
-
+        const newItem = JSON.parse(result);
+        console.log(newItem);
+        const newRow = renderFoodItemRow(newItem);
+        document.getElementById("food-items").appendChild(newRow);
     };
     </script>
 {% endblock %}
