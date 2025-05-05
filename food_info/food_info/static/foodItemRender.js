@@ -27,6 +27,5 @@ function renderFoodItemRow(item) {
     proteinValueCell.classList.add('text-right');
     kcalValueCell.innerHTML = item.price_per_1000_kcal.toFixed(2);
     kcalValueCell.classList.add('text-right');
-
     return newRow;
 }
