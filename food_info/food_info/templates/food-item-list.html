@@ -8,11 +8,35 @@
         td { border: 1px solid #333; padding-left: 5px; padding-right: 5px;}
         .text-center { text-align: center; }
         .text-left { text-align: left; }
+        .one-click-file-upload::-webkit-file-upload-button {
+          visibility: hidden;
+        }
+        .one-click-file-upload { color: transparent; }
+        .one-click-file-upload::before {
+            color: white;
+            background-color: green;
+            content: '📷';
+            display: inline-block;
+            border-radius: 25px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 42px;
+            position: absolute;
+            right: 40px;
+            bottom: 50px;
+        }
     </style>
 </head>
 <body>
 {% block content %}
-    <a style="position: absolute; right: 50px; bottom: 50px; width: 50px; height: 50px; color: white; background: green; text-decoration: none; text-align: center; font-size: 40px; font-weight: bold; border-radius: 25px;" href="new/">+</a>
+    <a style="position: absolute; right: 100px; bottom: 50px; width: 50px; height: 50px; color: white; background: green; text-decoration: none; text-align: center; font-size: 40px; font-weight: bold; border-radius: 25px;" href="new/">+</a>
     <table style="margin-left: auto; margin-right: auto;">
         <tr>
             <th>Name</th>
@@ -41,7 +65,7 @@
     </table>
     <form id="ean-image-form" enctype="multipart/form-data" action="" method="post">
         {% csrf_token %}
-        {{ photo_form }}
+        <input type="file" name="image" accept="image/*" required="" id="id_image" class="one-click-file-upload">
     </form>
     <script>
     let formElem = document.getElementById("ean-image-form");

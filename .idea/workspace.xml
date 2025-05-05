@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Can add new items with a photo of the barcode">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Work on adding a photo button on the front page for adding new items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1746292667163" duration="5883000" />
       <workItem from="1746303714796" duration="10670000" />
       <workItem from="1746371816734" duration="14476000" />
-      <workItem from="1746396733720" duration="4865000" />
+      <workItem from="1746396733720" duration="7552000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -326,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746399922905</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Work on adding a photo button on the front page for adding new items">
+      <option name="closed" value="true" />
+      <created>1746401681247</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746401681247</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +354,19 @@
     <MESSAGE value="Add fetch_nutrition_info" />
     <MESSAGE value="Fetch nutrition info from EAN image when user uploads an image" />
     <MESSAGE value="Can add new items with a photo of the barcode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can add new items with a photo of the barcode" />
+    <MESSAGE value="Work on adding a photo button on the front page for adding new items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on adding a photo button on the front page for adding new items" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/food_info/food_info/views.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/food_info$fetch_info.coverage" NAME="fetch_info Coverage Results" MODIFIED="1746385759204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/food_info/food_info" />
