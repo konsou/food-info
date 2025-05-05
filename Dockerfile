@@ -13,6 +13,6 @@ RUN rm requirements.txt
 
 COPY food_info /app
 COPY start.sh /app/
-RUN mkdir /static
+RUN mkdir /static-root
 WORKDIR /app
 ENTRYPOINT ["/app/start.sh"]

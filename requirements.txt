@@ -7,3 +7,4 @@ black  # dev
 requests~=2.32.3
 beautifulsoup4
 djangorestframework
+whitenoise
