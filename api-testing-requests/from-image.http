@@ -1,5 +1,5 @@
 ### GET request to example server
-POST http://localhost:8000/api/from-image/
+POST https://food.konso.fi/api/from-image/
 Content-Type: application/json
 
 < ./test-file.json

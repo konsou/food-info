@@ -30,16 +30,17 @@ class FoodItemFromImage(APIView):
             except (ValueError, OSError, ValidationError):
                 return Response(status=400)
 
-        already_existing_item = FoodItem.objects.filter(ean=ean)[0]
-        if already_existing_item:
+        try:
+            already_exists = FoodItem.objects.get(ean=ean)
             return Response(
-                {"error": f"{already_existing_item.name} already exists"}, status=400
+                {"error": f"{already_exists.name} already exists"}, status=409
             )
+        except FoodItem.DoesNotExist:
+            pass
 
         food_item = fetch_item_info(ean)
         food_item.save()
 
         serializer = FoodItemSerializer(food_item)
-        json = JSONRenderer().render(serializer.data)
 
-        return Response(data=json)
+        return Response(data=serializer.data)
