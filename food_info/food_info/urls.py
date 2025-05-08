@@ -16,16 +16,17 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
 from .views.food_item_list import food_item_list
-from .views.views import new_food_item, food_item_from_image
-from .views.api.food_item import ListFoodItems
+from .views.api.food_item import FoodItemViewSet, FoodItemFromImage
 
+router = DefaultRouter()
+router.register(r"items", FoodItemViewSet, basename="food-item")
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", food_item_list),
-    path("new/", new_food_item),
-    path("from-image/", food_item_from_image),
-    path("api/items/", ListFoodItems.as_view()),
+    path("api/", include(router.urls)),
+    path("api/from-image/", FoodItemFromImage.as_view()),
 ]

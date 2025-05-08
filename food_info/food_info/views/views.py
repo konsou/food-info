@@ -1,17 +1,12 @@
 import tempfile
 
-from django.core import serializers
 from django.core.exceptions import ValidationError
 from django.http import (
     HttpResponseRedirect,
     HttpRequest,
-    HttpResponseNotAllowed,
     HttpResponse,
-    JsonResponse,
-    HttpResponseBadRequest,
 )
 from django.shortcuts import render
-from django.views.generic import ListView
 from rest_framework.decorators import api_view
 from rest_framework.renderers import JSONRenderer
 from rest_framework.request import Request
@@ -20,7 +15,6 @@ from rest_framework.response import Response
 from ..barcode import read_barcode, validate_ean
 from ..fetch_info import fetch_item_info
 from ..forms import FoodItemForm, UploadEANImageForm
-from ..models import FoodItem
 from ..serializers import FoodItemSerializer
 
 

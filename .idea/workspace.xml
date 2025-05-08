@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Make ean unique">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Use whitenoise to serve static files">
+      <change afterPath="$PROJECT_DIR$/api-testing-requests/from-image.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-testing-requests/test-file.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_info/food_info/static/foodItemFromForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/templates/food-item-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/views/api/food_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views/api/food_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +33,7 @@
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -44,6 +52,9 @@
     &quot;accountId&quot;: &quot;67ad4606-70fc-4a93-82f9-8cd11b9c94db&quot;
   }
 }</component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -61,6 +72,8 @@
     "Django Server.Django.executor": "Run",
     "Docker.Dockerfile.executor": "Run",
     "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "HTTP Request.from-image | GET request to example server (1).executor": "Run",
+    "HTTP Request.from-image | GET request to example server.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.fetch_info.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
@@ -77,6 +90,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
@@ -96,14 +110,20 @@
       <recent name="$PROJECT_DIR$/food_info/food_info" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api-testing-requests" />
       <recent name="$PROJECT_DIR$/food_info/food_info/views" />
       <recent name="$PROJECT_DIR$/food_info" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/food_info/food_info/templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.Django">
+    <configuration name="from-image | GET request to example server (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-testing-requests/from-image.http" executionIdentifier="GET request to example server" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="from-image | GET request to example server" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/from-image.http" executionIdentifier="GET request to example server" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="fetch_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="food-info" />
       <option name="ENV_FILES" value="" />
@@ -187,10 +207,14 @@
       <item itemvalue="Django Server.Django" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="HTTP Request.from-image | GET request to example server" />
+      <item itemvalue="HTTP Request.from-image | GET request to example server (1)" />
       <item itemvalue="Python.fetch_info" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.from-image | GET request to example server (1)" />
+        <item itemvalue="HTTP Request.from-image | GET request to example server" />
         <item itemvalue="Python.fetch_info" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
@@ -217,7 +241,9 @@
       <workItem from="1746303714796" duration="10670000" />
       <workItem from="1746371816734" duration="14476000" />
       <workItem from="1746396733720" duration="14129000" />
-      <workItem from="1746453284295" duration="5155000" />
+      <workItem from="1746453284295" duration="8235000" />
+      <workItem from="1746527383580" duration="5000" />
+      <workItem from="1746731423083" duration="5154000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -387,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746456703245</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Use whitenoise to serve static files">
+      <option name="closed" value="true" />
+      <created>1746458461138</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746458461138</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +460,8 @@
     <MESSAGE value="Work towards using a js frontend" />
     <MESSAGE value="Fetch and render items with js and an API call" />
     <MESSAGE value="Make ean unique" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make ean unique" />
+    <MESSAGE value="Use whitenoise to serve static files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use whitenoise to serve static files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -437,9 +472,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/food_info/food_info/settings.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/food_info/food_info/views/api/food_item.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/food_info/food_info/views/views.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
