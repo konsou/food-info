@@ -8,10 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Change adding item from image to an api endpoint">
+    <list default="true" id="7d3a91bb-f6d4-403a-976e-2af89321b771" name="Changes" comment="Fix double escaped data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-testing-requests/from-image.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-testing-requests/from-image.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_info/food_info/views/api/food_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/views/api/food_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_info/food_info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_info/food_info/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +90,7 @@
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML",
       "JavaScript",
       "JSON"
     ]
@@ -200,10 +200,10 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.Django" />
-      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="HTTP Request.from-image | GET request to example server" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="HTTP Request.from-image | GET request to example server (1)" />
+      <item itemvalue="HTTP Request.from-image | GET request to example server" />
       <item itemvalue="Python.fetch_info" />
     </list>
     <recent_temporary>
@@ -238,7 +238,10 @@
       <workItem from="1746396733720" duration="14129000" />
       <workItem from="1746453284295" duration="8235000" />
       <workItem from="1746527383580" duration="5000" />
-      <workItem from="1746731423083" duration="7318000" />
+      <workItem from="1746731423083" duration="7508000" />
+      <workItem from="1746765851269" duration="793000" />
+      <workItem from="1746786755412" duration="7000" />
+      <workItem from="1746894964574" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="Initial semi-working scaffold">
       <option name="closed" value="true" />
@@ -432,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746736740934</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fix double escaped data">
+      <option name="closed" value="true" />
+      <created>1746738772055</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746738772055</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +484,8 @@
     <MESSAGE value="Make ean unique" />
     <MESSAGE value="Use whitenoise to serve static files" />
     <MESSAGE value="Change adding item from image to an api endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change adding item from image to an api endpoint" />
+    <MESSAGE value="Fix double escaped data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix double escaped data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

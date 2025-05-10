@@ -20,6 +20,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from .views.food_item_list import food_item_list
+from .views.views import new_food_item
 from .views.api.food_item import FoodItemViewSet, FoodItemFromImage
 
 router = DefaultRouter()
@@ -27,6 +28,7 @@ router.register(r"items", FoodItemViewSet, basename="food-item")
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", food_item_list),
+    path("new/", new_food_item),
     path("api/", include(router.urls)),
     path("api/from-image/", FoodItemFromImage.as_view()),
 ]
